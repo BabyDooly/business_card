@@ -21,28 +21,14 @@ import lombok.ToString;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends BaseTimeEntity {
     @Id
-    @Column(
-            name = "member_id",
-            nullable = false,
-            length = 20
-    )
+    @Column(name = "member_id", nullable = false, length = 20)
     private String id;
-    @GeneratedValue(
-            strategy = GenerationType.AUTO
-    )
-    @Column(
-            name = "member_num",
-            nullable = false
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "member_num", nullable = false)
     private int num;
-
     @Column(name = "member_password", nullable = false)
     private String password;
-    @Column(
-            name = "member_Name",
-            length = 15,
-            nullable = false
-    )
+    @Column(name = "member_Name", length = 15, nullable = false)
     private String Name;
     @Column(name = "member_phone", length = 30, nullable = false)
     private String phone;
